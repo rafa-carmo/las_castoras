@@ -1,6 +1,8 @@
 import { HeroSlider } from '@/components/HeroSlider'
 import { TeamSlider } from '@/components/TeamSlider'
+import { corpoTecnicoMock } from '@/mocks/corpoTecnico'
 import { heroCardsMock } from '@/mocks/home'
+import { jogadorasMock } from '@/mocks/jogadoras'
 
 export default function Home() {
   return (
@@ -13,16 +15,8 @@ export default function Home() {
       </div>
       {/* Team */}
       <section className="py-10 w-full min-h-[90vh] container mx-auto">
-        <div className="relative w-fit pb-5">
-          <div className="absolute bottom-2 right-2 left-2 h-1 rounded-full bg-primary-500 contents-[' ']"></div>
-
-          <h4 className="text-3xl font-bold font-sans text-center text-primary-500 drop-shadow-[0_1.2px_1.2px_var(--tw-shadow-color)] shadow-white/75">
-            Jogadoras
-          </h4>
-        </div>
-        <div className="pt-10">
-          <TeamSlider />
-        </div>
+        <TeamSlider title="Corpo Técnico" items={corpoTecnicoMock} />
+        <TeamSlider title="Jogadoras" zoom items={jogadorasMock} />
       </section>
       {/* About */}
       <div className="w-full min-h-[90vh]"></div>

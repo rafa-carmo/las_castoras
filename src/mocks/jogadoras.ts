@@ -1,6 +1,6 @@
-import { Jogadora } from '@/components/TeamSlider'
+import { Item } from '@/components/TeamSlider'
 
-export const jogadorasMock: Jogadora[] = [
+export const jogadorasMock: Item[] = [
   {
     name: 'Leila Aguirre',
     image: '/assets/novos_elementos/Placas sem fundo/Arquera1.png',
