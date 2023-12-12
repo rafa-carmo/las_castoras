@@ -20,7 +20,7 @@ export default function Home() {
             Jogadoras
           </h4>
         </div>
-        <div className="">
+        <div className="pt-10">
           <TeamSlider />
         </div>
       </section>
