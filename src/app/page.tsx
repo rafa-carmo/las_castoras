@@ -15,7 +15,7 @@ export default function Home() {
       </div>
       {/* Team */}
       <section className="py-10 w-full min-h-[90vh] container mx-auto">
-        <TeamSlider title="Corpo Técnico" items={corpoTecnicoMock} />
+        <TeamSlider title="Corpo Técnico" zoom items={corpoTecnicoMock} />
         <TeamSlider title="Jogadoras" zoom items={jogadorasMock} />
       </section>
       {/* About */}
