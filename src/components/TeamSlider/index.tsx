@@ -30,9 +30,8 @@ export function TeamSlider({ items, title, zoom }: TeamSliderProps) {
       <div className="pt-10">
         <Swiper
           modules={[A11y, Autoplay]}
-          spaceBetween={20}
-          slidesPerView={6}
-          centeredSlides={true}
+          spaceBetween={10}
+          slidesPerView={5.9}
           autoplay={{
             delay: 5000,
             disableOnInteraction: false,
@@ -50,7 +49,7 @@ export function TeamSlider({ items, title, zoom }: TeamSliderProps) {
               >
                 <div className="absolute top-0 left-0 w-[185px] h-3/6 contents-[' '] bg-primary-300 [clip-path:polygon(0%_0%,100%_0%,100%_100%)] overflow-hidden -z-10 group-hover:bg-primary-500 group-hover:h-[110%] transition-all duration-500 rounded-t"></div>
                 <div className="absolute bottom-0 left-0 w-[185px] h-3/6 contents-[' '] bg-primary-300 [clip-path:polygon(0%_0%,100%_0%,100%_100%)] overflow-hidden rotate-180 -z-10 group-hover:bg-primary-500 group-hover:h-[110%] transition-all duration-500 rounded-b"></div>
-                <div className="relative z-0 w-[185px] ">
+                <div className="relative z-0 w-[185px]">
                   <Image
                     src="/assets/Flag_of_Argentina.png"
                     width={32}
@@ -75,11 +74,21 @@ export function TeamSlider({ items, title, zoom }: TeamSliderProps) {
                     } `}
                     data-testid="image"
                   />
-                  <div className="absolute bottom-1 z-0 text-white pt-2 pb-1 px-2 text-center flex flex-col items-center w-full cursor-default">
-                    <p className=" font-bold text-xs md:text-lg leading-2 [text-shadow:_0_0_10px_var(--tw-shadow-color)] shadow-black leading-3">
-                      {item.name}
-                    </p>
-                    <p className="text-sm leading-3">({item.assoc})</p>
+                  <div className="absolute bottom-0 z-0 left-0 right-0">
+                    <div className="relative bottom-0 z-0 text-white pt-2 pb-1 px-2 text-center flex flex-col items-center w-full cursor-default">
+                      <div
+                        className="absolute -z-10 top-0 left-0 bottom-0 right-0 bg-primary-300 object-cover contents-[' '] cardPattern"
+                        style={{
+                          WebkitMaskImage: "url('/assets/splash.svg')",
+                          WebkitMaskRepeat: 'no-repeat',
+                          WebkitMaskSize: 'cover',
+                        }}
+                      ></div>
+                      <p className=" font-bold text-xs md:text-base leading-2 [text-shadow:_0_0_10px_var(--tw-shadow-color)] shadow-black leading-3">
+                        {item.name}
+                      </p>
+                      <p className="text-xs leading-3">({item.assoc})</p>
+                    </div>
                   </div>
                 </div>
               </div>
