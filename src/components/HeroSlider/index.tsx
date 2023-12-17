@@ -33,7 +33,7 @@ export function HeroSlider({ slides }: HeroSliderProps) {
         },
       }}
       navigation
-      className="max-w-[500px]"
+      className="max-w-[500px] w-[90vw] px-5 md:px-0"
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={`slide-${index}-${slide.title}`}>

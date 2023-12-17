@@ -11,11 +11,11 @@ export interface SlideProps {
 
 export function Slide({ title, description, button }: SlideProps) {
   return (
-    <div className="bg-zinc-900/50 p-5 rounded-md flex flex-col gap-3 max-w-[500px]">
-      <h3 className="text-3xl font-semibold text-zinc-100 line-clamp-2">
+    <div className="bg-zinc-900/50 p-5 rounded-md flex flex-col gap-3 max-w-[500px] w-full">
+      <h3 className="text-lg md:text-3xl font-semibold text-zinc-100 line-clamp-1 md:line-clamp-2">
         {title}
       </h3>
-      <p className="text-xl font-semibold text-zinc-300 line-clamp-3">
+      <p className="text-sm md:text-xl font-semibold text-zinc-300 line-clamp-2 md:line-clamp-3">
         {description}
       </p>
       <div className="w-full flex justify-end ">

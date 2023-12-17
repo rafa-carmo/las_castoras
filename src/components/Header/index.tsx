@@ -47,7 +47,7 @@ export function Header() {
         onTop ? 'bg-zinc-900/30 text-white ' : 'bg-white/50'
       } transition-all duration-700 ${isVisible ? 'top-0' : '-top-24'}`}
     >
-      <div className="w-full flex items-center justify-between container mx-auto group">
+      <div className="w-full flex items-center justify-between container mx-auto group  px-5 md:px-0">
         <Link
           href="/"
           className="flex items-center flex-col"

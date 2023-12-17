@@ -36,6 +36,26 @@ export function TeamSlider({ items, title, zoom }: TeamSliderProps) {
             delay: 5000,
             disableOnInteraction: false,
           }}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            350: {
+              slidesPerView: 2,
+            },
+            640: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+            1280: {
+              slidesPerView: 5,
+            },
+            1536: {
+              slidesPerView: 6,
+            },
+          }}
           loop={true}
           effect="creative"
           navigation
