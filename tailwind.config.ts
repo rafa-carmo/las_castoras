@@ -9,6 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
+        hero: ['Grandstander', 'cursive'],
         roboto: ['Roboto', 'sans-serif'],
       },
       colors: {
@@ -19,6 +20,9 @@ const config: Config = {
         secondary: {
           600: '#fcbf45',
         },
+      },
+      dropShadow: {
+        text: 'drop-shadow-[0_1.2px_1.2px_var(--tw-shadow-color)]',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

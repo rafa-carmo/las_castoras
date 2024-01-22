@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Roboto } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
-const roboto = Roboto({ subsets: ['latin'], weight: '700' })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -17,7 +16,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} ${roboto.className} flex flex-col min-h-screen bg-primary-500/25`}
+        className={`${inter.className} flex flex-col min-h-screen bg-primary-500/25`}
       >
         <Header />
         <main className="flex-1 ">{children}</main>
