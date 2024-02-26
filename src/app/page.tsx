@@ -1,6 +1,7 @@
 import { TeamSection } from '@/components/TeamSection'
 import { WaveDivider } from './divider'
 
+
 export default function Home() {
   return (
     <div>
@@ -15,8 +16,8 @@ export default function Home() {
               Saiba Como
             </button>
           </div>
-        </div>
-      </div>
+
+
       <div className="relative h-fit z-0">
         <WaveDivider
           height={100}
