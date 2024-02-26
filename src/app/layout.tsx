@@ -16,13 +16,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
-        className={`${inter.className} flex flex-col min-h-screen bg-primary-500/25`}
+        className={`${inter.className} ${roboto.className} flex flex-col min-h-screen `}
       >
         <Header />
         <main className="flex-1 ">{children}</main>
-        {/* <main className="flex-1 bg-[url('/assets/novos_elementos/fundo-azul-aquarela-de-inverno.svg')] bg-center bg-cover bg-no-repeat grid place-items-center"> */}
-        {/* <main className="flex-1 bg-[url('/assets/novos_elementos/aquarela-azul-degradada.svg')] bg-center bg-cover bg-no-repeat grid place-items-center"> */}
-        <Footer />
+       <Footer />
       </body>
     </html>
   )
