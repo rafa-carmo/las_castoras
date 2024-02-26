@@ -1,5 +1,5 @@
-import { TeamSection } from "@/components/TeamSection";
-import { WaveDivider } from "./divider";
+import { TeamSection } from '@/components/TeamSection'
+import { WaveDivider } from './divider'
 
 export default function Home() {
   return (
@@ -60,5 +60,5 @@ export default function Home() {
       {/* About */}
       <div className="w-full min-h-[90vh]"></div>
     </div>
-  );
+  )
 }

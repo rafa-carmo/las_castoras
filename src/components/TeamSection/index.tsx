@@ -60,7 +60,6 @@ export function TeamSection() {
                             WebkitMaskImage: "url('/assets/splash.svg')",
                             WebkitMaskRepeat: 'no-repeat',
                             WebkitMaskSize: 'cover',
-
                           }}
                         ></div>
                         <p className=" font-bold text-xs md:text-base leading-2 [text-shadow:_0_0_10px_var(--tw-shadow-color)] shadow-black leading-3">
@@ -176,5 +175,4 @@ export function TeamSection() {
       </div>
     </section>
   )
-
 }
