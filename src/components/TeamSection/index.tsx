@@ -60,6 +60,7 @@ export function TeamSection() {
                             WebkitMaskImage: "url('/assets/splash.svg')",
                             WebkitMaskRepeat: "no-repeat",
                             WebkitMaskSize: "cover",
+
                           }}
                         ></div>
                         <p className=" font-bold text-xs md:text-base leading-2 [text-shadow:_0_0_10px_var(--tw-shadow-color)] shadow-black leading-3">
@@ -137,7 +138,8 @@ export function TeamSection() {
         >
           <div
             className={`text-white left-0 right-0 h-36 flex items-center justify-center font-hero text-xl absolute -z-0 transition-all duration-500 ${
-              selectedPlayer ? "opacity-0" : "opacity-100"
+              selectedPlayer ? 'opacity-0' : 'opacity-100'
+
             }`}
           >
             Selecione uma Jogadora para ver os detalhes
@@ -174,5 +176,7 @@ export function TeamSection() {
         </div>
       </div>
     </section>
+
   );
+
 }

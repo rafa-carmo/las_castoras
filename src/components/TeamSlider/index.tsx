@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import 'swiper/css'
 import Image from 'next/image'
+import { SwiperOptions } from 'swiper/types'
 
 export interface Item {
   name: string
@@ -15,9 +16,47 @@ interface TeamSliderProps {
   items: Item[]
   title: string
   zoom?: boolean
+  sliderProps?: SwiperOptions
 }
 
-export function TeamSlider({ items, title, zoom }: TeamSliderProps) {
+const swiperProps: SwiperOptions = {
+  modules: [A11y, Autoplay],
+  spaceBetween: 10,
+  slidesPerView: 5.9,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  // breakpoints: {
+  //   0: {
+  //     slidesPerView: 1,
+  //   },
+  //   350: {
+  //     slidesPerView: 2,
+  //   },
+  //   640: {
+  //     slidesPerView: 3,
+  //   },
+  //   1024: {
+  //     slidesPerView: 4,
+  //   },
+  //   1280: {
+  //     slidesPerView: 5,
+  //   },
+  //   1536: {
+  //     slidesPerView: 6,
+  //   },
+  // },
+  loop: true,
+  effect: 'creative',
+  navigation: true,
+}
+export function TeamSlider({
+  items,
+  title,
+  zoom,
+  sliderProps,
+}: TeamSliderProps) {
   return (
     <div>
       <div className="relative w-fit pb-5">
@@ -29,47 +68,19 @@ export function TeamSlider({ items, title, zoom }: TeamSliderProps) {
       </div>
       <div className="pt-10">
         <Swiper
-          modules={[A11y, Autoplay]}
-          spaceBetween={10}
-          slidesPerView={5.9}
-          autoplay={{
-            delay: 5000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-            350: {
-              slidesPerView: 2,
-            },
-            640: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 4,
-            },
-            1280: {
-              slidesPerView: 5,
-            },
-            1536: {
-              slidesPerView: 6,
-            },
-          }}
-          loop={true}
-          effect="creative"
-          navigation
-          className="max-w-[100vw]"
+          {...swiperProps}
+          {...sliderProps}
+          className="w-full max-w-[45vw]"
         >
           {items.map((item, index) => (
             <SwiperSlide key={index}>
               <div
-                className="w-fit max-w-[265px] relative group"
+                className="w-fit max-w-[265px] relative group "
                 title={item.name}
               >
                 <div className="absolute top-0 left-0 w-[185px] h-3/6 contents-[' '] bg-primary-300 [clip-path:polygon(0%_0%,100%_0%,100%_100%)] overflow-hidden -z-10 group-hover:bg-primary-500 group-hover:h-[110%] transition-all duration-500 rounded-t"></div>
                 <div className="absolute bottom-0 left-0 w-[185px] h-3/6 contents-[' '] bg-primary-300 [clip-path:polygon(0%_0%,100%_0%,100%_100%)] overflow-hidden rotate-180 -z-10 group-hover:bg-primary-500 group-hover:h-[110%] transition-all duration-500 rounded-b"></div>
-                <div className="relative z-0 w-[185px]">
+                <div className="relative z-0 w-[185px] h-[265px]">
                   <Image
                     src="/assets/Flag_of_Argentina.png"
                     width={32}
