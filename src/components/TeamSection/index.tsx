@@ -1,13 +1,13 @@
-"use client";
+'use client'
 
-import { jogadorasMock } from "@/mocks/jogadoras";
-import Image from "next/image";
-import { useState } from "react";
-import { Item } from "../TeamSlider";
-import { corpoTecnicoMock } from "@/mocks/corpoTecnico";
+import { jogadorasMock } from '@/mocks/jogadoras'
+import Image from 'next/image'
+import { useState } from 'react'
+import { Item } from '../TeamSlider'
+import { corpoTecnicoMock } from '@/mocks/corpoTecnico'
 
 export function TeamSection() {
-  const [selectedPlayer, setSelectedPlayer] = useState<Item | null>(null);
+  const [selectedPlayer, setSelectedPlayer] = useState<Item | null>(null)
   return (
     <section className="py-10 flex flex-col gap-10 px-10">
       <h3 className="font-hero text-5xl font-bold text-center text-primary-500 drop-shadow-[0_1.2px_1.2px_var(--tw-shadow-color)] shadow-white/75">
@@ -58,8 +58,8 @@ export function TeamSection() {
                           className="absolute -z-10 top-0 left-0 bottom-0 right-0 bg-primary-300 object-cover contents-[' '] cardPattern"
                           style={{
                             WebkitMaskImage: "url('/assets/splash.svg')",
-                            WebkitMaskRepeat: "no-repeat",
-                            WebkitMaskSize: "cover",
+                            WebkitMaskRepeat: 'no-repeat',
+                            WebkitMaskSize: 'cover',
                           }}
                         ></div>
                         <p className=" font-bold text-xs md:text-base leading-2 [text-shadow:_0_0_10px_var(--tw-shadow-color)] shadow-black leading-3">
@@ -116,8 +116,8 @@ export function TeamSection() {
                           className="absolute -z-10 top-0 left-0 bottom-0 right-0 bg-primary-300 object-cover contents-[' '] cardPattern"
                           style={{
                             WebkitMaskImage: "url('/assets/splash.svg')",
-                            WebkitMaskRepeat: "no-repeat",
-                            WebkitMaskSize: "cover",
+                            WebkitMaskRepeat: 'no-repeat',
+                            WebkitMaskSize: 'cover',
                           }}
                         ></div>
                         <p className=" font-bold text-xs md:text-base leading-2 [text-shadow:_0_0_10px_var(--tw-shadow-color)] shadow-black leading-3">
@@ -137,14 +137,14 @@ export function TeamSection() {
         >
           <div
             className={`text-white left-0 right-0 h-36 flex items-center justify-center font-hero text-xl absolute -z-0 transition-all duration-500 ${
-              selectedPlayer ? "opacity-0" : "opacity-100"
+              selectedPlayer ? 'opacity-0' : 'opacity-100'
             }`}
           >
             Selecione uma Jogadora para ver os detalhes
           </div>
           <div
             className={`opacity-0 ${
-              selectedPlayer && "opacity-100"
+              selectedPlayer && 'opacity-100'
             } transition-opacity duration-500`}
           >
             {selectedPlayer && (
@@ -174,5 +174,5 @@ export function TeamSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
