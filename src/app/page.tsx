@@ -1,6 +1,7 @@
-import { Button } from '@/components/Global/button'
-import { TeamSection } from '@/components/TeamSection'
-import { WaveDivider } from './divider'
+import { Button } from "@/components/Global/button";
+import { NewsSection } from "@/components/NewsSection";
+import { TeamSection } from "@/components/TeamSection";
+import { WaveDivider } from "./divider";
 
 export default function Home() {
   return (
@@ -59,8 +60,7 @@ export default function Home() {
       {/* Team */}
       <TeamSection />
 
-      {/* About */}
-      <div className="w-full min-h-[90vh]"> </div>
+      <NewsSection />
     </div>
-  )
+  );
 }
