@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --primary-300: "#75aadb";
+    --primary-500: "#4e89bf";
+    --primary-700: "#2596be";
+  }
+}
+
 
 /* grandstander-regular - latin */
 @font-face {
@@ -27,3 +35,8 @@
     font-weight: 700;
     src: url('/fonts/grandstander-v17-latin-700italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+
+.shadow-filter {
+  filter: drop-shadow(-20px 10px 20px #fcbf45);
+}
