@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Roboto } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { ReactNode } from 'react'
 import './globals.css'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
-const roboto = Roboto({ subsets: ['latin'], weight: '700' })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,13 +15,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} ${roboto.className} flex flex-col min-h-screen bg-primary-500/25`}
-      >
+      <body className={`${inter.className} flex flex-col min-h-screen `}>
         <Header />
         <main className="flex-1 ">{children}</main>
-        {/* <main className="flex-1 bg-[url('/assets/novos_elementos/fundo-azul-aquarela-de-inverno.svg')] bg-center bg-cover bg-no-repeat grid place-items-center"> */}
-        {/* <main className="flex-1 bg-[url('/assets/novos_elementos/aquarela-azul-degradada.svg')] bg-center bg-cover bg-no-repeat grid place-items-center"> */}
         <Footer />
       </body>
     </html>
