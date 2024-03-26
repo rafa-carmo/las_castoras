@@ -1,6 +1,8 @@
 import { Button } from "@/components/Global/button";
 import { NewsSection } from "@/components/NewsSection";
 import { TeamSection } from "@/components/TeamSection";
+import { BsTwitterX } from "react-icons/bs";
+import { FaInstagram } from "react-icons/fa";
 import { WaveDivider } from "./divider";
 
 export default function Home() {
@@ -59,8 +61,52 @@ export default function Home() {
       </section>
       {/* Team */}
       <TeamSection />
-
       <NewsSection />
+
+      <section className="bg-primary-700 w-full">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 min-h-[90vh] place-items-center">
+          <div className="flex flex-col items-start justify-center gap-10 h-full max-w-[600px] md:px-0 px-5 md:pt-0 pt-5">
+            <h3 className="text-4xl md:text-5xl font-bold text-secondary-600 font-hero">
+              Sigue a nuestro equipo en nuestras redes
+            </h3>
+            <div className="flex items-center justify-center w-full gap-3">
+              <a
+                href="https://www.instagram.com/lascastorasfutsal/"
+                target="_blank"
+                rel="noreferrer no-refer"
+                title="instagram"
+                className="p-2 border-2 border-transparent hover:border-secondary-600 hover:scale-110 transition-all duration-500 text-white rounded-lg"
+              >
+                <FaInstagram size={32} />
+              </a>
+              <a
+                href="https://twitter.com/las_castoras"
+                target="_blank"
+                rel="noreferrer no-refer"
+                title="twitter"
+                className="p-2 border-2 border-transparent hover:border-secondary-600 hover:scale-110 transition-all duration-500 text-white rounded-lg"
+              >
+                <BsTwitterX size={32} />
+              </a>
+            </div>
+          </div>
+          <hr className="border-2 border-black w-full my-2 lg:hidden" />
+
+          <div className="flex  gap-7 items-center justify-center flex-wrap py-10 lg:py-0">
+            {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((pic, key) => (
+              <div key={pic} className="w-40">
+                <img
+                  src={`/assets/social/0${pic}.jpg`}
+                  alt=""
+                  className={`bg-white/75 px-2 pt-2 pb-8 overflow-hidden hover:scale-125 transition-all duration-500 ${
+                    key % 2 === 0 ? "rotate-12" : "-rotate-12"
+                  }`}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
