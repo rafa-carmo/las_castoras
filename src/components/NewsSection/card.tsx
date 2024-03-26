@@ -1,9 +1,9 @@
-import { Button } from "../Global/button";
+import { Button } from '../Global/button'
 
 interface CardProps {
-  title: string;
-  description: string;
-  cover: string;
+  title: string
+  description: string
+  cover: string
 }
 
 export function Card({ cover, description, title }: CardProps) {
@@ -33,5 +33,5 @@ export function Card({ cover, description, title }: CardProps) {
         </span>
       </footer>
     </article>
-  );
+  )
 }

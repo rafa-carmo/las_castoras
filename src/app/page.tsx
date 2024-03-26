@@ -1,9 +1,9 @@
-import { Button } from "@/components/Global/button";
-import { NewsSection } from "@/components/NewsSection";
-import { TeamSection } from "@/components/TeamSection";
-import { BsTwitterX } from "react-icons/bs";
-import { FaInstagram } from "react-icons/fa";
-import { WaveDivider } from "./divider";
+import { Button } from '@/components/Global/button'
+import { NewsSection } from '@/components/NewsSection'
+import { TeamSection } from '@/components/TeamSection'
+import { BsTwitterX } from 'react-icons/bs'
+import { FaInstagram } from 'react-icons/fa'
+import { WaveDivider } from './divider'
 
 export default function Home() {
   return (
@@ -99,7 +99,7 @@ export default function Home() {
                   src={`/assets/social/0${pic}.jpg`}
                   alt=""
                   className={`bg-white/75 px-2 pt-2 pb-8 overflow-hidden hover:scale-125 transition-all duration-500 ${
-                    key % 2 === 0 ? "rotate-12" : "-rotate-12"
+                    key % 2 === 0 ? 'rotate-12' : '-rotate-12'
                   }`}
                 />
               </div>
@@ -108,5 +108,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  );
+  )
 }

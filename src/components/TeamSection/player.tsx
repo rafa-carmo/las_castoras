@@ -1,10 +1,10 @@
-import { type AnimationControls, motion } from "framer-motion";
+import { type AnimationControls, motion } from 'framer-motion'
 
 interface PlayerInfoProps {
-  name: string;
-  image: string;
-  assoc?: string;
-  controls: AnimationControls;
+  name: string
+  image: string
+  assoc?: string
+  controls: AnimationControls
 }
 
 export function PlayerInfo({ name, image, assoc, controls }: PlayerInfoProps) {
@@ -71,5 +71,5 @@ export function PlayerInfo({ name, image, assoc, controls }: PlayerInfoProps) {
         </div>
       </motion.div>
     </>
-  );
+  )
 }

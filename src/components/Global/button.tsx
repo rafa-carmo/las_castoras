@@ -1,26 +1,26 @@
-import type { ReactNode } from "react";
+import type { ReactNode } from 'react'
 const variants = {
-  default: "text-white  bg-secondary-600 hover:bg-secondary-600 ",
+  default: 'text-white  bg-secondary-600 hover:bg-secondary-600 ',
   ghost:
-    "bg-transparent hover:bg-zinc-100/75 border border-transparent hover:border-black",
-};
+    'bg-transparent hover:bg-zinc-100/75 border border-transparent hover:border-black',
+}
 
 const sizes = {
-    default: "text-xl",
-    sm: "text-default"
+  default: 'text-xl',
+  sm: 'text-default',
 }
 interface ButtonProps {
-  children: ReactNode;
-  onClick?: () => void;
-  variant?: keyof typeof variants;
+  children: ReactNode
+  onClick?: () => void
+  variant?: keyof typeof variants
   size?: keyof typeof sizes
 }
 
 export function Button({
   onClick,
   children,
-  variant = "default",
-  size="default"
+  variant = 'default',
+  size = 'default',
 }: ButtonProps) {
   return (
     <button
@@ -30,5 +30,5 @@ export function Button({
     >
       {children}
     </button>
-  );
+  )
 }

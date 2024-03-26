@@ -1,10 +1,10 @@
-"use client";
+'use client'
 
-import { news } from "@/mocks/news";
-import "swiper/css";
-import { Autoplay, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Card } from "./card";
+import { news } from '@/mocks/news'
+import 'swiper/css'
+import { Autoplay, Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Card } from './card'
 
 export function NewsSection() {
   return (
@@ -52,5 +52,5 @@ export function NewsSection() {
         </div>
       </main>
     </section>
-  );
+  )
 }
