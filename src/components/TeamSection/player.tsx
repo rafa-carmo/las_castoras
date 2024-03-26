@@ -59,7 +59,7 @@ export function PlayerInfo({ name, image, assoc, controls }: PlayerInfoProps) {
       >
         <div className="flex flex-col space-y-5 w-fit max-w-xl">
           <div className="flex flex-col items-center w-fit">
-            <h3 className=" text-6xl md:text-8xl font-bold font-hero text-primary-500 text-center">
+            <h3 className=" text-6xl md:text-8xl font-bold font-hero text-primary-500 text-center drop-shadow-[0_1.2px_1.2px_var(--tw-shadow-color)] shadow-white">
               {name}
             </h3>
             <h4 className="text-2xl font-bold font-hero">{assoc}</h4>
