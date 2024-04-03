@@ -1,35 +1,36 @@
-"use client";
+'use client'
 
-import { useModal } from "@/providers/modal-provider";
+import { useModal } from '@/providers/modal-provider'
+import { ReactNode } from 'react'
 
 interface CustomModalProps {
-  children: React.ReactNode;
+  children: ReactNode
 }
 
 export function CustomModal({ children }: CustomModalProps) {
-  const { isOpen, setClose } = useModal();
+  const { isOpen, setClose } = useModal()
 
   return (
     <>
       <div
         className={`fixed top-0 left-0 right-0 bottom-0 bg-zinc-400/50 p-10 z-40 ${
           isOpen
-            ? "opacity-100 pointer-events-auto"
-            : "opacity-0 pointer-events-none"
+            ? 'opacity-100 pointer-events-auto'
+            : 'opacity-0 pointer-events-none'
         }`}
       />
       <div
         className={`fixed top-0 left-0 right-0 bottom-0 z-50 transition-all duration-500 md:=x ${
           isOpen
-            ? "opacity-100 scale-100 pointer-events-auto"
-            : "opacity-0 scale-0 pointer-events-none"
+            ? 'opacity-100 scale-100 pointer-events-auto'
+            : 'opacity-0 scale-0 pointer-events-none'
         }`}
       >
         <button
           className={`fixed top-0 left-0 right-0 bottom-0 p-10 z-40 ${
             isOpen
-              ? "opacity-100 pointer-events-auto"
-              : "opacity-0 pointer-events-none"
+              ? 'opacity-100 pointer-events-auto'
+              : 'opacity-0 pointer-events-none'
           }`}
           onClick={setClose}
         />
@@ -40,5 +41,5 @@ export function CustomModal({ children }: CustomModalProps) {
         </div>
       </div>
     </>
-  );
+  )
 }

@@ -1,17 +1,17 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import type { ReactNode } from "react";
-import "./globals.css";
-import ModalProvider from "@/providers/modal-provider";
+import { Footer } from '@/components/Footer'
+import { Header } from '@/components/Header'
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import type { ReactNode } from 'react'
+import './globals.css'
+import ModalProvider from '@/providers/modal-provider'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Las Castoras",
-  description: "Seleccion Argentina femenina de futsal de personas sordas",
-};
+  title: 'Las Castoras',
+  description: 'Seleccion Argentina femenina de futsal de personas sordas',
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
@@ -24,5 +24,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </ModalProvider>
       </body>
     </html>
-  );
+  )
 }

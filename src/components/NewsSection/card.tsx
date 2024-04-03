@@ -1,22 +1,22 @@
-"use client";
+'use client'
 
-import { useModal } from "@/providers/modal-provider";
-import { Button } from "../Global/button";
-import { CustomModal } from "../Global/custom-modal";
-import { ModalPost } from "../Modals/post";
-import { ModalPost as ModalPostType } from "@/types/post";
-import DOMPurify from "isomorphic-dompurify";
+import { useModal } from '@/providers/modal-provider'
+import { Button } from '../Global/button'
+import { CustomModal } from '../Global/custom-modal'
+import { ModalPost } from '../Modals/post'
+import { ModalPost as ModalPostType } from '@/types/post'
+import DOMPurify from 'isomorphic-dompurify'
 
 interface CardProps {
-  title: string;
-  content: string;
-  cover: string;
-  links: ModalPostType["links"];
-  createdAt: string;
+  title: string
+  content: string
+  cover: string
+  links: ModalPostType['links']
+  createdAt: string
 }
 
 export function Card({ cover, content, title, links, createdAt }: CardProps) {
-  const { setOpen } = useModal();
+  const { setOpen } = useModal()
 
   function openPost() {
     setOpen(
@@ -28,11 +28,11 @@ export function Card({ cover, content, title, links, createdAt }: CardProps) {
           links={links}
           createdAt={createdAt}
         />
-      </CustomModal>
-    );
+      </CustomModal>,
+    )
   }
   function sanitize(html: string) {
-    return DOMPurify.sanitize(html, { USE_PROFILES: { html: false } });
+    return DOMPurify.sanitize(html, { USE_PROFILES: { html: false } })
   }
   return (
     <article className="w-full md:w-[42rem] flex items-center justify-center gap-3 px-2 md:px-0">
@@ -60,5 +60,5 @@ export function Card({ cover, content, title, links, createdAt }: CardProps) {
         </span>
       </footer>
     </article>
-  );
+  )
 }

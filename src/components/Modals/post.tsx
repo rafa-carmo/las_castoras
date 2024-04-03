@@ -1,14 +1,14 @@
-import { ModalPost as ModalPostType } from "@/types/post";
-import { FaInstagram } from "react-icons/fa";
-import { FaLink } from "react-icons/fa6";
-import DOMPurify from "isomorphic-dompurify";
+import { ModalPost as ModalPostType } from '@/types/post'
+import { FaInstagram } from 'react-icons/fa'
+import { FaLink } from 'react-icons/fa6'
+import DOMPurify from 'isomorphic-dompurify'
 
 export const postIcons = {
   instagram: <FaInstagram size={15} />,
   default: <FaLink size={15} />,
-};
+}
 
-type ModalPostProps = ModalPostType;
+type ModalPostProps = ModalPostType
 
 export function ModalPost({
   title,
@@ -18,7 +18,7 @@ export function ModalPost({
   createdAt,
 }: ModalPostProps) {
   function sanitize(html: string) {
-    return DOMPurify.sanitize(html, { USE_PROFILES: { html: true } });
+    return DOMPurify.sanitize(html, { USE_PROFILES: { html: true } })
   }
   return (
     <article className="flex lg:flex-row flex-col items-center justify-center bg-white h-[90vh] w-full md:h-[700px] my-5 overflow-auto rounded-lg">
@@ -48,7 +48,7 @@ export function ModalPost({
               href={link.url}
               className="border p-2 rounded flex items-center gap-1 "
             >
-              {postIcons[link.type ? link.type : "default"]} {link.type}
+              {postIcons[link.type ? link.type : 'default']} {link.type}
             </a>
           ))}
         </div>
@@ -59,5 +59,5 @@ export function ModalPost({
         </footer>
       </div>
     </article>
-  );
+  )
 }
